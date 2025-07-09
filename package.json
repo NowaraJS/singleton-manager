@@ -1,17 +1,24 @@
 {
-  "name": "template-package-npm",
-  "version": "1.2.0",
-  "author": "Komiriko",
-  "description": "A template to create a bun package.",
+  "name": "@nowarajs/singleton-manager",
+  "version": "1.0.0",
+  "author": "NowaraJS",
+  "description": "Singleton Manager is a package that provides a simple way to manage singletons in your application. It allows you to create, retrieve, and manage singletons with ease and type safety.",
   "type": "module",
   "license": "MIT",
   "keywords": [
-    "pkg"
+    "bun",
+    "manager",
+    "node",
+    "nowarajs",
+    "singleton-manager",
+    "singleton",
+    "type-safe",
+    "typescript"
   ],
   "scripts": {
     "build": "bun builder.ts",
     "dev": "bun --watch sandbox/index.ts",
-    "docs": "typedoc --tsconfig tsconfig.build.json",
+    "docs": "bunx typedoc --tsconfig tsconfig.build.json",
     "fix-lint": "eslint --fix ./source",
     "lint": "eslint ./source",
     "test:integration": "bun test $(find test/integration -name '*.spec.ts')",
@@ -24,14 +31,10 @@
     "@types/bun": "^1.2.18",
     "eslint": "^9.30.1",
     "globals": "^16.3.0",
-    "typescript-eslint": "^8.35.1",
+    "typescript-eslint": "^8.36.0",
     "typescript": "^5.8.3"
   },
   "exports": {
-    "./error": "./dist/error/index.js",
-    "./error/types": "./dist/error/types/index.js",
-    "./utils": "./dist/utils/index.js",
-    "./utils/enums": "./dist/utils/enums/index.js",
     ".": "./dist/index.js"
   },
   "changelog": {
