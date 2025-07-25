@@ -1,4 +1,16 @@
 
+## v1.1.6
+
+[compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.1.5...v1.1.6)
+
+### 📖 Documentation
+
+- **📖:** [Update README] ([a90137b](https://github.com/NowaraJS/singleton-manager/commit/a90137b))
+
+### ❤️ Contributors
+
+- Komiroko <komiriko@pm.me>
+
 ## v1.1.5
 
 [compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.1.4...v1.1.5)
