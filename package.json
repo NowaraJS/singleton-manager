@@ -7,13 +7,11 @@
 	"license": "MIT",
 	"keywords": [
 		"bun",
-		"manager",
 		"node",
 		"nowarajs",
 		"singleton-manager",
 		"singleton",
-		"type-safe",
-		"typescript"
+		"type-safe"
 	],
 	"scripts": {
 		"build": "bun builder.ts",
@@ -27,11 +25,11 @@
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.31.0",
-		"@stylistic/eslint-plugin": "^5.2.0",
-		"@types/bun": "^1.2.18",
+		"@stylistic/eslint-plugin": "^5.2.2",
+		"@types/bun": "^1.2.19",
 		"eslint": "^9.31.0",
 		"globals": "^16.3.0",
-		"typescript-eslint": "^8.37.0",
+		"typescript-eslint": "^8.38.0",
 		"typescript": "^5.8.3"
 	},
 	"exports": {
