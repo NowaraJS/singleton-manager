@@ -34,7 +34,7 @@
 ## 🔧 Installation
 
 ```bash
-bun add @nowarajs/singleton-manager
+bun add @nowarajs/singleton-manager @nowarajs/error
 ```
 
 ## ⚙️ Usage

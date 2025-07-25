@@ -1,3 +1,5 @@
+import { BaseError } from '@nowarajs/error';
+
 import { singletonManagerErrorKeys } from './enums/singletonManagerErrorKeys';
 
 /**
@@ -45,7 +47,7 @@ export class SingletonManager {
 	* @param constructor - The constructor of the class.
 	* @param args - The arguments to pass to the constructor of the class.
 	*
-	* @throws ({@link Error}) If the class constructor is already registered, it throws an error.
+	* @throws ({@link BaseError}) If the class constructor is already registered, it throws an error.
 	*/
 	public static register<
 		TClass extends object,
@@ -56,7 +58,10 @@ export class SingletonManager {
 		...args: TArgs
 	): void {
 		if (this._registry.has(name))
-			throw new Error(singletonManagerErrorKeys.classConstructorAlreadyRegistered, { cause: { name } });
+			throw new BaseError({
+				message: singletonManagerErrorKeys.classConstructorAlreadyRegistered,
+				cause: { name }
+			});
 		this._registry.set(name, new constructor(...args));
 	}
 
@@ -65,11 +70,14 @@ export class SingletonManager {
 	*
 	* @param name - The name of the class to unregister.
 	*²
-	* @throws ({@link Error}) If the class constructor is not registered, it throws an error.
+	* @throws ({@link BaseError}) If the class constructor is not registered, it throws an error.
 	*/
 	public static unregister(name: string): void {
 		if (!this._registry.has(name))
-			throw new Error(singletonManagerErrorKeys.classConstructorNotRegistered, { cause: { name } });
+			throw new BaseError({
+				message: singletonManagerErrorKeys.classConstructorNotRegistered,
+				cause: { name }
+			});
 		this._registry.delete(name);
 	}
 
@@ -80,13 +88,16 @@ export class SingletonManager {
 	*
 	* @param name - The name of the class to get the singleton instance.
 	*
-	* @throws ({@link Error}) If the class is not registered, it throws an error.
+	* @throws ({@link BaseError}) If the class is not registered, it throws an error.
 	*
 	* @returns The singleton instance of the class.
 	*/
 	public static get<TClass>(name: string): TClass {
 		if (!this._registry.has(name))
-			throw new Error(singletonManagerErrorKeys.classConstructorNotRegistered, { cause: { name } });
+			throw new BaseError({
+				message: singletonManagerErrorKeys.classConstructorNotRegistered,
+				cause: { name }
+			});
 		return this._registry.get(name) as TClass;
 	}
 
