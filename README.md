@@ -130,7 +130,7 @@ SingletonManager.register('DatabaseConnection', DatabaseConnection);
 
 ## 📚 API Reference
 
-You can find the complete API reference documentation for `TypedEventEmitter` at:
+You can find the complete API reference documentation for `SingletonManager` at:
 
 - [Reference Documentation](https://nowarajs.github.io/singleton-manager/)
 
