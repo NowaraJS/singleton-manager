@@ -1,6 +1,6 @@
 {
 	"name": "@nowarajs/singleton-manager",
-	"version": "1.1.6",
+	"version": "1.1.7",
 	"author": "NowaraJS",
 	"description": "Singleton Manager is a package that provides a simple way to manage singletons in your application. It allows you to create, retrieve, and manage singletons with ease and type safety.",
 	"type": "module",
