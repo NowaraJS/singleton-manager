@@ -118,9 +118,8 @@ dbConnection.query('SELECT * FROM users'); // ✅ TypeScript knows this method e
 
 ```typescript
 // Check if a singleton is registered
-if (SingletonManager.has('DatabaseConnection')) {
+if (SingletonManager.has('DatabaseConnection'))
 	const db = SingletonManager.get<DatabaseConnection>('DatabaseConnection');
-}
 
 // Unregister a singleton (removes the instance)
 SingletonManager.unregister('DatabaseConnection');
