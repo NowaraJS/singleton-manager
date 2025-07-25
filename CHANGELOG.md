@@ -1,4 +1,24 @@
 
+## v1.1.8
+
+[compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.1.7...v1.1.8)
+
+### 🧹 Refactors
+
+- **🧹:** [Update error handling to use BaseError in SingletonManager] ([0dd923e](https://github.com/NowaraJS/singleton-manager/commit/0dd923e))
+
+### 📖 Documentation
+
+- **📖:** [Add @nowarajs/error as a dependency in installation instructions] ([6fcc0b9](https://github.com/NowaraJS/singleton-manager/commit/6fcc0b9))
+
+### 📦 Build
+
+- **📦:** [Add peerDependencies for @nowarajs/error] ([f3885d4](https://github.com/NowaraJS/singleton-manager/commit/f3885d4))
+
+### ❤️ Contributors
+
+- Komiroko <komiriko@pm.me>
+
 ## v1.1.7
 
 [compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.1.6...v1.1.7)
