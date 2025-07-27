@@ -1,4 +1,4 @@
-# 🎯 Singleton Manager
+# 🎯 NowaraJS - Singleton Manager
 
 ## 📌 Table of Contents
 
