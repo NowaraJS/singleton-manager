@@ -1,4 +1,20 @@
 
+## v1.1.9
+
+[compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.1.8...v1.1.9)
+
+### 📖 Documentation
+
+- **📖:** [Update project title in README.md] ([afc6404](https://github.com/NowaraJS/singleton-manager/commit/afc6404))
+
+### 📦 Build
+
+- **📦:** [Update dependencies in package.json] ([ac49c67](https://github.com/NowaraJS/singleton-manager/commit/ac49c67))
+
+### ❤️ Contributors
+
+- Komiroko <komiriko@pm.me>
+
 ## v1.1.8
 
 [compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.1.7...v1.1.8)
