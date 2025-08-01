@@ -2,7 +2,7 @@
 import { afterEach, beforeEach, describe, expect, test } from 'bun:test';
 
 import { SingletonManager } from '#/singletonManager';
-import { singletonManagerErrorKeys } from '#/enums/singletonManagerErrorKeys';
+import { SINGLETON_MANAGER_ERROR_KEYS } from '#/enums/singletonManagerErrorKeys';
 
 /**
 * Test singleton class without constructor parameters
@@ -188,7 +188,7 @@ describe('SingletonManager', () => {
 
 			expect(() => {
 				SingletonManager.register(singletonNames.EXAMPLE, ExampleSingleton);
-			}).toThrow(singletonManagerErrorKeys.classConstructorAlreadyRegistered);
+			}).toThrow(SINGLETON_MANAGER_ERROR_KEYS.CLASS_CONSTRUCTOR_ALREADY_REGISTERED);
 		});
 
 		test('should create only one instance per registered class', () => {
@@ -228,7 +228,7 @@ describe('SingletonManager', () => {
 		test('should throw an error when trying to unregister a non-registered class', () => {
 			expect(() => {
 				SingletonManager.unregister(singletonNames.NON_EXISTENT);
-			}).toThrow(singletonManagerErrorKeys.classConstructorNotRegistered);
+			}).toThrow(SINGLETON_MANAGER_ERROR_KEYS.CLASS_CONSTRUCTOR_NOT_REGISTERED);
 		});
 
 		test('should not affect other registered classes when unregistering one', () => {
@@ -285,7 +285,7 @@ describe('SingletonManager', () => {
 		test('should throw an error when trying to get a non-registered class', () => {
 			expect(() => {
 				SingletonManager.get(singletonNames.NON_EXISTENT);
-			}).toThrow(singletonManagerErrorKeys.classConstructorNotRegistered);
+			}).toThrow(SINGLETON_MANAGER_ERROR_KEYS.CLASS_CONSTRUCTOR_NOT_REGISTERED);
 		});
 
 		test('should throw an error after unregistering a class', () => {
@@ -294,7 +294,7 @@ describe('SingletonManager', () => {
 
 			expect(() => {
 				SingletonManager.get(singletonNames.EXAMPLE);
-			}).toThrow(singletonManagerErrorKeys.classConstructorNotRegistered);
+			}).toThrow(SINGLETON_MANAGER_ERROR_KEYS.CLASS_CONSTRUCTOR_NOT_REGISTERED);
 		});
 	});
 
