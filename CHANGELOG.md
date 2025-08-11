@@ -1,4 +1,20 @@
 
+## v1.1.11
+
+[compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.1.10...v1.1.11)
+
+### 📦 Build
+
+- **📦:** [Update devDependencies and peerDependencies versions] - Updated `@eslint/js` from `^9.32.0` to `^9.33.0` - Updated `@stylistic/eslint-plugin` from `^5.2.2` to `^5.2.3` - Updated `@types/bun` from `^1.2.19` to `^1.2.20` - Updated `eslint` from `^9.32.0` to `^9.33.0` - Updated `typescript-eslint` from `^8.38.0` to `^8.39.0` - Updated `@nowarajs/error` from `^1.1.4` to `^1.1.5` ([9fded06](https://github.com/NowaraJS/singleton-manager/commit/9fded06))
+
+### 🤖 CI
+
+- **🤖:** [Add GitHub workflows for CI/CD processes] ([5983a23](https://github.com/NowaraJS/singleton-manager/commit/5983a23))
+
+### ❤️ Contributors
+
+- Komiroko <komiriko@pm.me>
+
 ## v1.1.10
 
 [compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.1.9...v1.1.10)
