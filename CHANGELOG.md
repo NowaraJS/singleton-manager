@@ -1,4 +1,20 @@
 
+## v1.1.12
+
+[compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.1.11...v1.1.12)
+
+### 📖 Documentation
+
+- **📖:** [Update copilot instructions for clarity and structure] ([559b361](https://github.com/NowaraJS/singleton-manager/commit/559b361))
+
+### 📦 Build
+
+- **📦:** [Update dependencies for improved stability and features] ([a3da0c0](https://github.com/NowaraJS/singleton-manager/commit/a3da0c0))
+
+### ❤️ Contributors
+
+- Komiroko <komiriko@pm.me>
+
 ## v1.1.11
 
 [compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.1.10...v1.1.11)
