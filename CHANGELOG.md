@@ -1,4 +1,27 @@
 
+## v1.1.13
+
+[compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.1.12...v1.1.13)
+
+### 📖 Documentation
+
+- **📖:** [Add Contributor Covenant Code of Conduct] ([b2a9a19](https://github.com/NowaraJS/singleton-manager/commit/b2a9a19))
+- **📖:** [Add contributing guidelines to the project] ([43f19a1](https://github.com/NowaraJS/singleton-manager/commit/43f19a1))
+- **📖:** [Add security policy documentation] ([11f8158](https://github.com/NowaraJS/singleton-manager/commit/11f8158))
+
+### 📦 Build
+
+- **📦:** [Update dependencies and clean up package.json] ([8696cc5](https://github.com/NowaraJS/singleton-manager/commit/8696cc5))
+
+### 🦉 Chore
+
+- **🦉:** [Update contact email in issue template] ([aa9da49](https://github.com/NowaraJS/singleton-manager/commit/aa9da49))
+- **🦉:** [rename MIT License file with explicit .md] ([6a4ab82](https://github.com/NowaraJS/singleton-manager/commit/6a4ab82))
+
+### ❤️ Contributors
+
+- Komiroko <komiriko@pm.me>
+
 ## v1.1.12
 
 [compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.1.11...v1.1.12)
