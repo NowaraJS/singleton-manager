@@ -1,4 +1,30 @@
 
+## v1.2.0
+
+[compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.1.15...v1.2.0)
+
+### 🚀 Enhancements
+
+- **🚀:** [add entrypoints for enum] ([c47a211](https://github.com/NowaraJS/singleton-manager/commit/c47a211))
+
+### 🧹 Refactors
+
+- **🧹:** [Rename files to kebab-case and refacto BaseError V1.3] ([0f805d4](https://github.com/NowaraJS/singleton-manager/commit/0f805d4))
+
+### 📦 Build
+
+- **📦:** [Update devDependencies in package.json] ([bf9428a](https://github.com/NowaraJS/singleton-manager/commit/bf9428a))
+- **📦:** [Add enums entrypoint to build configuration] ## Build - Added './source/enums/index.ts' as an entrypoint for the build process. ([580e55e](https://github.com/NowaraJS/singleton-manager/commit/580e55e))
+- **📦:** [Update dependencies and exports in package.json] ([4747e47](https://github.com/NowaraJS/singleton-manager/commit/4747e47))
+
+### 🦉 Chore
+
+- **🦉:** [Add Dependabot configuration for package updates] ## Chores - Introduced a new Dependabot configuration file. ## Description This commit adds a `.github/dependabot.yml` file to enable Dependabot for automatic updates of the "bun" package ecosystem. The updates are scheduled to occur daily, ensuring that dependencies remain up-to-date. ([b231956](https://github.com/NowaraJS/singleton-manager/commit/b231956))
+
+### ❤️ Contributors
+
+- Komiroko <komiriko@pm.me>
+
 ## v1.1.15
 
 [compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.1.14...v1.1.15)
