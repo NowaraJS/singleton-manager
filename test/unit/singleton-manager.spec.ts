@@ -1,8 +1,8 @@
 /* eslint-disable max-classes-per-file */
 import { afterEach, beforeEach, describe, expect, test } from 'bun:test';
 
-import { SingletonManager } from '#/singletonManager';
-import { SINGLETON_MANAGER_ERROR_KEYS } from '#/enums/singletonManagerErrorKeys';
+import { SingletonManager } from '#/singleton-manager';
+import { SINGLETON_MANAGER_ERROR_KEYS } from '#/enums/singleton-manager-error-keys';
 
 /**
 * Test singleton class without constructor parameters

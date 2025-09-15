@@ -1,6 +1,6 @@
 import { BaseError } from '@nowarajs/error';
 
-import { SINGLETON_MANAGER_ERROR_KEYS } from './enums/singletonManagerErrorKeys';
+import { SINGLETON_MANAGER_ERROR_KEYS } from './enums/singleton-manager-error-keys';
 
 /**
 * SingletonManager is a static class that manages the singletons in the application.
@@ -58,10 +58,7 @@ export class SingletonManager {
 		...args: TArgs
 	): void {
 		if (this._registry.has(name))
-			throw new BaseError({
-				message: SINGLETON_MANAGER_ERROR_KEYS.CLASS_CONSTRUCTOR_ALREADY_REGISTERED,
-				cause: { name }
-			});
+			throw new BaseError(SINGLETON_MANAGER_ERROR_KEYS.CLASS_CONSTRUCTOR_ALREADY_REGISTERED, { name });
 		this._registry.set(name, new constructor(...args));
 	}
 
@@ -74,10 +71,7 @@ export class SingletonManager {
 	*/
 	public static unregister(name: string): void {
 		if (!this._registry.has(name))
-			throw new BaseError({
-				message: SINGLETON_MANAGER_ERROR_KEYS.CLASS_CONSTRUCTOR_NOT_REGISTERED,
-				cause: { name }
-			});
+			throw new BaseError(SINGLETON_MANAGER_ERROR_KEYS.CLASS_CONSTRUCTOR_NOT_REGISTERED, { name });
 		this._registry.delete(name);
 	}
 
@@ -94,10 +88,7 @@ export class SingletonManager {
 	*/
 	public static get<TClass>(name: string): TClass {
 		if (!this._registry.has(name))
-			throw new BaseError({
-				message: SINGLETON_MANAGER_ERROR_KEYS.CLASS_CONSTRUCTOR_NOT_REGISTERED,
-				cause: { name }
-			});
+			throw new BaseError(SINGLETON_MANAGER_ERROR_KEYS.CLASS_CONSTRUCTOR_NOT_REGISTERED, { name });
 		return this._registry.get(name) as TClass;
 	}
 

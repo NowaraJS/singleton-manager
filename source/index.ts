@@ -1,1 +1,1 @@
-export { SingletonManager } from './singletonManager';
+export { SingletonManager } from './singleton-manager';

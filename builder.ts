@@ -21,7 +21,8 @@ await Bun.build({
 	root: './source',
 	entrypoints: [
 		// # ————————— Root ————————— #
-		'./source/index.ts'
+		'./source/index.ts',
+		'./source/enums/index.ts'
 	],
 	outdir: './dist',
 	splitting: true,
