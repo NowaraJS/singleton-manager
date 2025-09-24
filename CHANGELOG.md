@@ -1,4 +1,20 @@
 
+## v1.2.2
+
+[compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.2.1...v1.2.2)
+
+### 🧹 Refactors
+
+- **🧹:** [Update error keys in SingletonManager] ([1fed533](https://github.com/NowaraJS/singleton-manager/commit/1fed533))
+
+### 📦 Build
+
+- **📦:** [Update Dependencies] ([2fd438c](https://github.com/NowaraJS/singleton-manager/commit/2fd438c))
+
+### ❤️ Contributors
+
+- Komiroko <komiriko@pm.me>
+
 ## v1.2.1
 
 [compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.2.0...v1.2.1)
