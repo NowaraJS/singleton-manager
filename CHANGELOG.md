@@ -1,4 +1,16 @@
 
+## v1.2.3
+
+[compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.2.2...v1.2.3)
+
+### 🧹 Refactors
+
+- **🧹:** [Update error keys format in SingletonManager] - Changed error key strings to use hyphens instead of camelCase. - Ensures consistency in error key formatting across the application. ([ac57190](https://github.com/NowaraJS/singleton-manager/commit/ac57190))
+
+### ❤️ Contributors
+
+- Komiroko <komiriko@pm.me>
+
 ## v1.2.2
 
 [compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.2.1...v1.2.2)
