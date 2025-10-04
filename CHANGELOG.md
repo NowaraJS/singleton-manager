@@ -1,4 +1,25 @@
 
+## v1.2.4
+
+[compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.2.3...v1.2.4)
+
+### 🦉 Chore
+
+- **🦉:** [Remove Dependabot configuration file] ([ea908df](https://github.com/NowaraJS/singleton-manager/commit/ea908df))
+- **🦉:** [Update devDependencies in package.json] ([dde5011](https://github.com/NowaraJS/singleton-manager/commit/dde5011))
+
+### 🧪 Tests
+
+- **🧪:** [Convert describe blocks to concurrent for better performance] ([2b0d868](https://github.com/NowaraJS/singleton-manager/commit/2b0d868))
+
+### 🤖 CI
+
+- **🤖:** [Update CI/CD workflows and actions for Bun project setup] ([20c6a06](https://github.com/NowaraJS/singleton-manager/commit/20c6a06))
+
+### ❤️ Contributors
+
+- Komiroko <komiriko@pm.me>
+
 ## v1.2.3
 
 [compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.2.2...v1.2.3)
