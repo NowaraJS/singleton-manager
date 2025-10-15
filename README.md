@@ -8,10 +8,6 @@
 	- [✨ Features](#-features)
 	- [🔧 Installation](#-installation)
 	- [⚙️ Usage](#-usage)
-		- [Basic Usage](#basic-usage)
-		- [With Constructor Parameters](#with-constructor-parameters)
-		- [Type Safety](#type-safety)
-		- [API Methods](#api-methods)
 	- [📚 API Reference](#-api-reference)
 	- [⚖️ License](#-license)
 	- [📧 Contact](#-contact)
@@ -26,10 +22,7 @@
 
 - 🔒 **Type-safe**: Full TypeScript support with generics
 - 🎯 **Centralized Management**: Single registry for all your singletons
-- 🔧 **Constructor Arguments**: Support for classes with constructor parameters
-- 🛡️ **Error Handling**: Clear error messages for common mistakes
 - ⚡ **Lightweight**: Minimal overhead with maximum functionality
-- 🧪 **Well Tested**: Comprehensive test suite included
 
 ## 🔧 Installation
 
@@ -39,12 +32,10 @@ bun add @nowarajs/singleton-manager @nowarajs/error
 
 ## ⚙️ Usage
 
-### Basic Usage
-
 ```typescript
 import { SingletonManager } from '@nowarajs/singleton-manager';
 
-// Define your singleton class
+// Define your singleton classes
 class DatabaseConnection {
 	private _isConnected = false;
 
@@ -53,79 +44,45 @@ class DatabaseConnection {
 		this._isConnected = true;
 	}
 
-	public get isConnected(): boolean {
-		return this._isConnected;
-	}
-
 	public query(sql: string): string[] {
 		console.log(`Executing query: ${sql}`);
 		return ['result1', 'result2'];
 	}
 }
 
-// Register the singleton
-SingletonManager.register('DatabaseConnection', DatabaseConnection);
-
-// Get the singleton instance (same instance every time)
-const db1 = SingletonManager.get<DatabaseConnection>('DatabaseConnection');
-const db2 = SingletonManager.get<DatabaseConnection>('DatabaseConnection');
-
-console.log(db1 === db2); // true - same instance
-```
-
-### With Constructor Parameters
-
-```typescript
 class ApiClient {
-	private readonly _baseUrl: string;
-	private readonly _apiKey: string;
-
-	public constructor(baseUrl: string, apiKey: string) {
-		this._baseUrl = baseUrl;
-		this._apiKey = apiKey;
-	}
+	public constructor(
+		private readonly _baseUrl: string,
+		private readonly _apiKey: string
+	) {}
 
 	public get baseUrl(): string {
 		return this._baseUrl;
 	}
 }
 
-// Register with constructor arguments
-SingletonManager.register(
-	'ApiClient', 
-	ApiClient, 
-	'https://api.example.com', 
-	'your-api-key'
-);
+// Register singletons (with or without constructor parameters)
+SingletonManager.register('DatabaseConnection', new DatabaseConnection());
+SingletonManager.register('ApiClient', new ApiClient('https://api.example.com', 'key'));
 
-// Use the singleton
-const client = SingletonManager.get<ApiClient>('ApiClient');
-console.log(client.baseUrl); // https://api.example.com
-```
+// Get singleton instances (same instance every time)
+const db1 = SingletonManager.get<DatabaseConnection>('DatabaseConnection');
+const db2 = SingletonManager.get<DatabaseConnection>('DatabaseConnection');
+console.log(db1 === db2); // true
 
-### Type Safety
-
-```typescript
 // TypeScript provides full type safety
-const dbConnection = SingletonManager.get<DatabaseConnection>('DatabaseConnection');
-dbConnection.query('SELECT * FROM users'); // ✅ TypeScript knows this method exists
+db1.query('SELECT * FROM users'); // ✅ Works
+// db1.nonExistentMethod(); // ❌ TypeScript error
 
-// Attempting to call non-existent methods will cause TypeScript errors
-// dbConnection.nonExistentMethod(); // ❌ TypeScript error
-```
+// Check if registered
+if (SingletonManager.has('ApiClient')) {
+	const client = SingletonManager.get<ApiClient>('ApiClient');
+	console.log(client.baseUrl); // https://api.example.com
+}
 
-### API Methods
-
-```typescript
-// Check if a singleton is registered
-if (SingletonManager.has('DatabaseConnection'))
-	const db = SingletonManager.get<DatabaseConnection>('DatabaseConnection');
-
-// Unregister a singleton (removes the instance)
+// Unregister and re-register
 SingletonManager.unregister('DatabaseConnection');
-
-// Re-register will create a new instance
-SingletonManager.register('DatabaseConnection', DatabaseConnection);
+SingletonManager.register('DatabaseConnection', new DatabaseConnection());
 ```
 
 ## 📚 API Reference
