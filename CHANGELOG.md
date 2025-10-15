@@ -1,4 +1,28 @@
 
+## v1.2.5
+
+[compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.2.4...v1.2.5)
+
+### 📖 Documentation
+
+- **📖:** [Update README for clarity and feature enhancements] ([88c466c](https://github.com/NowaraJS/singleton-manager/commit/88c466c))
+
+### 📦 Build
+
+- **📦:** [Update devDependencies for improved compatibility] ([7c54e84](https://github.com/NowaraJS/singleton-manager/commit/7c54e84))
+
+### 🦉 Chore
+
+- **🦉:** [Add semver field to changelog types] ([18c4a18](https://github.com/NowaraJS/singleton-manager/commit/18c4a18))
+
+### 🎨 Styles
+
+- **🎨:** [Update ESLint configuration for improved styling rules] ([5f70d6a](https://github.com/NowaraJS/singleton-manager/commit/5f70d6a))
+
+### ❤️ Contributors
+
+- Komiroko <komiriko@pm.me>
+
 ## v1.2.4
 
 [compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.2.3...v1.2.4)
