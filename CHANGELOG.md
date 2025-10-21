@@ -1,4 +1,16 @@
 
+## v1.2.7
+
+[compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.2.6...v1.2.7)
+
+### 📦 Build
+
+- **📦:** [Update @nowarajs/error dependency to version 1.3.7] ([cb22261](https://github.com/NowaraJS/singleton-manager/commit/cb22261))
+
+### ❤️ Contributors
+
+- Komiroko <komiriko@pm.me>
+
 ## v1.2.6
 
 [compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.2.5...v1.2.6)
