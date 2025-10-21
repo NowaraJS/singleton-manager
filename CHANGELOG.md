@@ -1,4 +1,24 @@
 
+## v1.2.6
+
+[compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.2.5...v1.2.6)
+
+### 📦 Build
+
+- **📦:** [Update devDependencies in package.json] ([68e5835](https://github.com/NowaraJS/singleton-manager/commit/68e5835))
+
+### 🦉 Chore
+
+- **🦉:** [Update .gitignore to include .zed directory] ([ae0c461](https://github.com/NowaraJS/singleton-manager/commit/ae0c461))
+
+### 🤖 CI
+
+- **🤖:** [Rename workflow from main-ci to main-test] ([1790ade](https://github.com/NowaraJS/singleton-manager/commit/1790ade))
+
+### ❤️ Contributors
+
+- Komiroko <komiriko@pm.me>
+
 ## v1.2.5
 
 [compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.2.4...v1.2.5)
