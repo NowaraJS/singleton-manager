@@ -97,6 +97,5 @@ Distributed under the MIT License. See [LICENSE](./LICENSE) for more information
 
 ## 📧 Contact
 
+- Mail: [nowarajs@pm.me](mailto:nowarajs@pm.me)
 - GitHub: [NowaraJS](https://github.com/NowaraJS)
-- Package: [@nowarajs/singleton-manager](https://www.npmjs.com/package/@nowarajs/singleton-manager)
-
