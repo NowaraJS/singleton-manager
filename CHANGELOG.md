@@ -1,4 +1,20 @@
 
+## v1.2.8
+
+[compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.2.7...v1.2.8)
+
+### 📖 Documentation
+
+- **📖:** [Update readme] ([a399a62](https://github.com/NowaraJS/singleton-manager/commit/a399a62))
+
+### 📦 Build
+
+- **📦:** [Update @nowarajs/error dependency to version 1.3.8] ([f8fb626](https://github.com/NowaraJS/singleton-manager/commit/f8fb626))
+
+### ❤️ Contributors
+
+- Komiroko <komiriko@pm.me>
+
 ## v1.2.7
 
 [compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.2.6...v1.2.7)
