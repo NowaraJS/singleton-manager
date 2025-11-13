@@ -1,4 +1,20 @@
 
+## v1.3.0
+
+[compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.2.8...v1.3.0)
+
+### 🚀 Enhancements
+
+- **🚀:** [use new class InternalError and new key format] ([bdbc68a](https://github.com/NowaraJS/singleton-manager/commit/bdbc68a))
+
+### 📦 Build
+
+- **📦:** [Update dependencies in package.json] - Updated @eslint/js from ^9.38.0 to ^9.39.1 - Updated @nowarajs/error from ^1.3.8 to ^1.3.10 - Updated @types/bun from ^1.3.0 to ^1.3.2 - Updated eslint from ^9.38.0 to ^9.39.1 - Updated globals from ^16.4.0 to ^16.5.0 - Updated typescript-eslint from ^8.46.2 to ^8.46.4 - Updated peer dependency @nowarajs/error to ^1.3.10 ([bb1f2e9](https://github.com/NowaraJS/singleton-manager/commit/bb1f2e9))
+
+### ❤️ Contributors
+
+- Komiroko <komiriko@pm.me>
+
 ## v1.2.8
 
 [compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.2.7...v1.2.8)
