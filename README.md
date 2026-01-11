@@ -1,28 +1,27 @@
 # 🎯 NowaraJS - Singleton Manager
 
+Managing singletons in TypeScript shouldn't require boilerplate everywhere. I built this package to have a single, centralized registry for all my singleton instances, no more scattered `getInstance()` patterns or global variables.
+
+## Why this package?
+
+The goal is simple: **One registry to rule them all.**
+
+Instead of implementing the singleton pattern in every class, you register instances once and retrieve them anywhere. Type-safe, predictable, and easy to test.
+
 ## 📌 Table of Contents
 
-- [🎯 Singleton Manager](#-singleton-manager)
-	- [📌 Table of Contents](#-table-of-contents)
-	- [📝 Description](#-description)
-	- [✨ Features](#-features)
-	- [🔧 Installation](#-installation)
-	- [⚙️ Usage](#-usage)
-	- [📚 API Reference](#-api-reference)
-	- [⚖️ License](#-license)
-	- [📧 Contact](#-contact)
-
-## 📝 Description
-
-> A powerful and type-safe singleton manager for TypeScript/JavaScript applications.
-
-**Singleton Manager** provides a centralized way to manage singleton instances in your application. It ensures that only one instance of each registered class exists throughout the application lifecycle, with full TypeScript support and type safety.
+- [Features](#-features)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [API Reference](#-api-reference)
+- [License](#-license)
+- [Contact](#-contact)
 
 ## ✨ Features
 
-- 🔒 **Type-safe**: Full TypeScript support with generics
-- 🎯 **Centralized Management**: Single registry for all your singletons
-- ⚡ **Lightweight**: Minimal overhead with maximum functionality
+- 🔒 **Type-Safe**: Full TypeScript support with generics, no `any` casting.
+- 🎯 **Centralized**: One place to manage all your singletons.
+- ⚡ **Lightweight**: Minimal overhead, zero dependencies.
 
 ## 🔧 Installation
 
@@ -32,10 +31,13 @@ bun add @nowarajs/singleton-manager @nowarajs/error
 
 ## ⚙️ Usage
 
+### Registering Singletons
+
+Register your instances once at startup. They'll be available everywhere.
+
 ```typescript
 import { SingletonManager } from '@nowarajs/singleton-manager';
 
-// Define your singleton classes
 class DatabaseConnection {
 	private _isConnected = false;
 
@@ -45,7 +47,6 @@ class DatabaseConnection {
 	}
 
 	public query(sql: string): string[] {
-		console.log(`Executing query: ${sql}`);
 		return ['result1', 'result2'];
 	}
 }
@@ -61,39 +62,44 @@ class ApiClient {
 	}
 }
 
-// Register singletons (with or without constructor parameters)
+// Register with any constructor signature
 SingletonManager.register('DatabaseConnection', new DatabaseConnection());
 SingletonManager.register('ApiClient', new ApiClient('https://api.example.com', 'key'));
+```
 
-// Get singleton instances (same instance every time)
+### Retrieving Instances
+
+Same instance, every time. TypeScript knows the type.
+
+```typescript
 const db1 = SingletonManager.get<DatabaseConnection>('DatabaseConnection');
 const db2 = SingletonManager.get<DatabaseConnection>('DatabaseConnection');
-console.log(db1 === db2); // true
 
-// TypeScript provides full type safety
-db1.query('SELECT * FROM users'); // ✅ Works
-// db1.nonExistentMethod(); // ❌ TypeScript error
+console.log(db1 === db2); // true — same reference
 
-// Check if registered
+db1.query('SELECT * FROM users'); // ✅ Type-safe
+```
+
+### Checking & Unregistering
+
+```typescript
 if (SingletonManager.has('ApiClient')) {
 	const client = SingletonManager.get<ApiClient>('ApiClient');
-	console.log(client.baseUrl); // https://api.example.com
+	console.log(client.baseUrl);
 }
 
-// Unregister and re-register
+// Need to swap an instance? Unregister first.
 SingletonManager.unregister('DatabaseConnection');
 SingletonManager.register('DatabaseConnection', new DatabaseConnection());
 ```
 
 ## 📚 API Reference
 
-You can find the complete API reference documentation for `SingletonManager` at:
-
-- [Reference Documentation](https://nowarajs.github.io/singleton-manager/)
+Full docs: [nowarajs.github.io/singleton-manager](https://nowarajs.github.io/singleton-manager/)
 
 ## ⚖️ License
 
-Distributed under the MIT License. See [LICENSE](./LICENSE) for more information.
+MIT — Feel free to use it.
 
 ## 📧 Contact
 
