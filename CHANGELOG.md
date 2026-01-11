@@ -1,4 +1,40 @@
 
+## v1.4.0
+
+[compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.3.0...v1.4.0)
+
+### 🚀 Enhancements
+
+- **🚀:** [add clear method to SingletonManager] ([c46cbeb](https://github.com/NowaraJS/singleton-manager/commit/c46cbeb))
+
+### 📖 Documentation
+
+- **📖:** [Update README] ([bcaa5f2](https://github.com/NowaraJS/singleton-manager/commit/bcaa5f2))
+
+### 📦 Build
+
+- **📦:** [Update devDependencies in package.json] - Updated @eslint/js to version ^9.39.2 - Updated @nowarajs/error to version ^1.4.0 - Updated @stylistic/eslint-plugin to version ^5.7.0 - Updated @types/bun to version ^1.3.5 - Updated eslint to version ^9.39.2 - Updated globals to version ^17.0.0 - Updated typescript-eslint to version ^8.52.0 - Updated peer dependency @nowarajs/error to version ^1.4.0 ([68a4edc](https://github.com/NowaraJS/singleton-manager/commit/68a4edc))
+
+### 🦉 Chore
+
+- **🦉:** [Add new agents for code review, documentation, performance, security, and testing] ([43f6e80](https://github.com/NowaraJS/singleton-manager/commit/43f6e80))
+
+### 🧪 Tests
+
+- **🧪:** [add tests for SingletonManager clear] ([77bd0f4](https://github.com/NowaraJS/singleton-manager/commit/77bd0f4))
+
+### 🎨 Styles
+
+- **🎨:** [update formatting in .gitignore and .npmignore files] ([5a10aef](https://github.com/NowaraJS/singleton-manager/commit/5a10aef))
+
+### 🤖 CI
+
+- **🤖:** [update workflow to euse OIDC for npm] ([2097d4a](https://github.com/NowaraJS/singleton-manager/commit/2097d4a))
+
+### ❤️ Contributors
+
+- Komiriko <komiriko@pm.me>
+
 ## v1.3.0
 
 [compare changes](https://github.com/NowaraJS/singleton-manager/compare/v1.2.8...v1.3.0)
