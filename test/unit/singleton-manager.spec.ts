@@ -5,8 +5,8 @@ import { SingletonManager } from '#/singleton-manager';
 import { SINGLETON_MANAGER_ERROR_KEYS } from '#/enums/singleton-manager-error-keys';
 
 /**
-* Test singleton class without constructor parameters
-*/
+ * Test singleton class without constructor parameters
+ */
 class ExampleSingleton {
 	private static _instanceCount = 0;
 
@@ -35,8 +35,8 @@ class ExampleSingleton {
 }
 
 /**
-* Test singleton class with one constructor parameter
-*/
+ * Test singleton class with one constructor parameter
+ */
 class ExampleSingleton2 {
 	private readonly _name: string;
 
@@ -50,8 +50,8 @@ class ExampleSingleton2 {
 }
 
 /**
-* Test singleton class with multiple constructor parameters
-*/
+ * Test singleton class with multiple constructor parameters
+ */
 class ExampleSingleton3 {
 	private readonly _name: string;
 
@@ -72,8 +72,8 @@ class ExampleSingleton3 {
 }
 
 /**
-* Test singleton class with complex constructor behavior
-*/
+ * Test singleton class with complex constructor behavior
+ */
 class ExampleSingleton4 {
 	private readonly _config: Record<string, unknown>;
 
@@ -87,8 +87,8 @@ class ExampleSingleton4 {
 }
 
 /**
-* Test constants for singleton names
-*/
+ * Test constants for singleton names
+ */
 const singletonNames = {
 	EXAMPLE: 'ExampleSingleton',
 	EXAMPLE_2: 'ExampleSingleton2',
@@ -98,16 +98,15 @@ const singletonNames = {
 } as const;
 
 /**
-* Helper function to clean up all registered singletons
-*/
-function cleanupSingletons(): void {
+ * Helper function to clean up all registered singletons
+ */
+const cleanupSingletons = (): void => {
 	for (const name of Object.values(singletonNames))
-		if (SingletonManager.has(name))
-			SingletonManager.unregister(name);
+		if (SingletonManager.has(name)) SingletonManager.unregister(name);
 
 	// Reset instance counter for ExampleSingleton
 	ExampleSingleton.resetCount();
-}
+};
 
 describe.concurrent('SingletonManager', () => {
 	beforeEach(() => {
@@ -142,7 +141,10 @@ describe.concurrent('SingletonManager', () => {
 		test('should register a class instance with constructor parameters', () => {
 			const expectedName = 'John';
 
-			SingletonManager.register(singletonNames.EXAMPLE_2, new ExampleSingleton2(expectedName));
+			SingletonManager.register(
+				singletonNames.EXAMPLE_2,
+				new ExampleSingleton2(expectedName)
+			);
 
 			expect(SingletonManager.has(singletonNames.EXAMPLE_2)).toBe(true);
 
@@ -156,7 +158,10 @@ describe.concurrent('SingletonManager', () => {
 			const expectedName = 'Jane';
 			const expectedAge = 30;
 
-			SingletonManager.register(singletonNames.EXAMPLE_3, new ExampleSingleton3(expectedName, expectedAge));
+			SingletonManager.register(
+				singletonNames.EXAMPLE_3,
+				new ExampleSingleton3(expectedName, expectedAge)
+			);
 
 			expect(SingletonManager.has(singletonNames.EXAMPLE_3)).toBe(true);
 
@@ -170,7 +175,10 @@ describe.concurrent('SingletonManager', () => {
 		test('should register a class with complex constructor parameters', () => {
 			const expectedConfig = { database: 'test', port: 3000 };
 
-			SingletonManager.register(singletonNames.EXAMPLE_4, new ExampleSingleton4(expectedConfig));
+			SingletonManager.register(
+				singletonNames.EXAMPLE_4,
+				new ExampleSingleton4(expectedConfig)
+			);
 
 			const instance = SingletonManager.get<ExampleSingleton4>(singletonNames.EXAMPLE_4);
 			expect(instance.config).toEqual({ ...expectedConfig, initialized: true });
@@ -350,7 +358,9 @@ describe.concurrent('SingletonManager', () => {
 			SingletonManager.register(specialName, new ExampleSingleton());
 
 			expect(SingletonManager.has(specialName)).toBe(true);
-			expect(SingletonManager.get<ExampleSingleton>(specialName)).toBeInstanceOf(ExampleSingleton);
+			expect(SingletonManager.get<ExampleSingleton>(specialName)).toBeInstanceOf(
+				ExampleSingleton
+			);
 
 			SingletonManager.unregister(specialName);
 		});
@@ -426,7 +436,9 @@ describe.concurrent('SingletonManager', () => {
 			SingletonManager.clear();
 
 			// Should not throw since registry is cleared
-			expect(() => SingletonManager.register(singletonNames.EXAMPLE, new ExampleSingleton())).not.toThrow();
+			expect(() =>
+				SingletonManager.register(singletonNames.EXAMPLE, new ExampleSingleton())
+			).not.toThrow();
 
 			expect(SingletonManager.has(singletonNames.EXAMPLE)).toBe(true);
 		});
